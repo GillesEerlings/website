@@ -40,11 +40,10 @@ const SectionsContainer = styled(Box)(({ theme }) => ({
 export default function AppAppBar() {
   const sections = [
     'Education',
-    'Experience',
-    'Teaching Experience',
-    'Thesis Advising',
     'Publications',
     'Presentations',
+    'Thesis Advising',
+    'Teaching',
     'Reviewing Experience',
   ];
 
@@ -64,9 +63,10 @@ export default function AppAppBar() {
         <Container maxWidth="lg">
           <StyledToolbar variant="dense" disableGutters>
             {/* Logo/Icon */}
-            <GEmonogramIcon />
+            
             {/* Sections (evenly distributed) */}
             <SectionsContainer>
+            <GEmonogramIcon />
               {sections.map((text) => (
                 <Button
                   key={text}

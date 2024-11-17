@@ -20,16 +20,18 @@ const Education = () => {
           Education
         </Typography>
         {educationList.map((edu, index) => (
-          <Grid container spacing={2} key={index} sx={{ mb: 3 }}>
+          <Grid container spacing={2} key={index} sx={{ mb: 3 }} alignItems="center">
             {/* Date Column */}
-            <Grid item xs={12} md={3}>
-              <Typography variant="body2" color="textSecondary">
-                {edu.date}
-              </Typography>
+            <Grid item xs={12} md={2}>
+              <Box sx={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+                <Typography variant="body2" color="textSecondary" fontWeight="bold">
+                  {edu.date}
+                </Typography>
+              </Box>
             </Grid>
 
             {/* Degree and Details */}
-            <Grid item xs={12} md={7}>
+            <Grid item xs={12} md={8}>
               <Typography variant="body2" fontWeight="bold" gutterBottom>
                 {edu.degree}
               </Typography>
@@ -43,7 +45,13 @@ const Education = () => {
                       href={advisor.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ textDecoration: 'none', color: '#4876EE' }}
+                      style={{
+                        textDecoration: 'none',
+                        color: '#4876EE',
+                        transition: 'text-decoration 0.2s ease-in-out',
+                      }}
+                      onMouseEnter={(e) => (e.target.style.textDecoration = 'underline')}
+                      onMouseLeave={(e) => (e.target.style.textDecoration = 'none')}
                     >
                       {advisor.name}
                     </a>

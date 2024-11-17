@@ -10,6 +10,7 @@ import './index.css';
 import AppAppBar from './components/AppBar';
 import Biography from './components/Biography';
 import Education from './components/Education';
+import Publications from './components/Publications';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +20,7 @@ root.render(
     <AppAppBar></AppAppBar>
     <Biography></Biography>
     <Education></Education>
+    <Publications></Publications>
   </React.StrictMode>
 );
 
