@@ -8,6 +8,7 @@ import '@fontsource/roboto/700.css';
 import './index.css';
 
 import AppAppBar from './components/AppBar';
+import Biography from './components/Biography';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,6 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AppAppBar></AppAppBar>
+    <Biography></Biography>
   </React.StrictMode>
 );
 

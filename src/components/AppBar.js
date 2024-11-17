@@ -6,7 +6,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import GEmonogramIcon from './SitemarkIcon';
+import GEmonogramIcon from './AppBarHomeIcon';
 
 // Create a theme with the Inter font
 const theme = createTheme({
