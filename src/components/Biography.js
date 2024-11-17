@@ -127,7 +127,7 @@ const Biography = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Divider sx={{ mt: 2 }} />
+          <Divider sx={{ mt: 6 }} />
         </Container>
       </Box>
     </Box>

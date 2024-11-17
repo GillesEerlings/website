@@ -9,6 +9,7 @@ import './index.css';
 
 import AppAppBar from './components/AppBar';
 import Biography from './components/Biography';
+import Education from './components/Education';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,6 +18,7 @@ root.render(
   <React.StrictMode>
     <AppAppBar></AppAppBar>
     <Biography></Biography>
+    <Education></Education>
   </React.StrictMode>
 );
 
