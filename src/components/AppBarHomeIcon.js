@@ -5,7 +5,7 @@ const AppBarHomeIcon = () => {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
       {/* Render the Home Icon */}
-      <HomeIcon style={{ fontSize: 24, color: '#4876EE' }} />
+      <HomeIcon style={{ fontSize: 24, color: 'black' }} />
     </div>
   );
 };

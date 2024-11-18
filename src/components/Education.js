@@ -7,7 +7,7 @@ const Education = () => {
 
   useEffect(() => {
     // Fetch the JSON file from the public folder
-    fetch('/education.json')
+    fetch('/data/education.json')
       .then((response) => response.json())
       .then((data) => setEducationList(data))
       .catch((error) => console.error('Error fetching education data:', error));
@@ -62,7 +62,7 @@ const Education = () => {
             </Grid>
 
             {/* University Column */}
-            <Grid item xs={12} md={2}>
+            <Grid item xs={12} md={2} >
               <Typography variant="body2" fontWeight="bold">
                 {edu.university}
               </Typography>

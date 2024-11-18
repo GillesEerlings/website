@@ -1,84 +1,71 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Grid, Container, Link, Button } from '@mui/material';
+import { Box, Typography, Grid, Container, Button } from '@mui/material';
 import Divider from '@mui/material/Divider';
 
-const Publications = () => {
-  const [publicationsList, setPublicationsList] = useState([]);
+const Presentations = () => {
+  const [presentationsList, setPresentationsList] = useState([]);
 
   useEffect(() => {
     // Fetch the JSON file from the public folder
-    fetch('/data/publications.json')
+    fetch('/data/presentations.json')
       .then((response) => response.json())
-      .then((data) => setPublicationsList(data))
-      .catch((error) => console.error('Error fetching publications:', error));
+      .then((data) => setPresentationsList(data))
+      .catch((error) => console.error('Error fetching presentations data:', error));
   }, []);
 
   const getConferenceLogo = (conference) => {
     switch (conference) {
-      case 'EICS':
-        return "/images/eics-icon.jpg"; // Path to the EICS logo
+      case 'FAIR':
+        return '/images/fair-icon.jpg'; // Path to the FAIR logo
       default:
-        return null; // Default fallback logo if needed
+        return null; // Fallback for other conferences
     }
-  };
-
-  const highlightAuthor = (authors, highlightName) => {
-    const parts = authors.split(new RegExp(`(${highlightName})`, 'gi'));
-    return parts.map((part, index) =>
-      part.toLowerCase() === highlightName.toLowerCase() ? (
-        <Box key={index} component="span" sx={{ fontWeight: 'bold' }}>
-          {part}
-        </Box>
-      ) : (
-        part
-      )
-    );
   };
 
   return (
     <Box sx={{ mt: 6, px: 2 }}>
       <Container maxWidth="lg">
         <Typography variant="h6" fontWeight="bold" gutterBottom>
-          Publications
+          Presentations
         </Typography>
         <Box>
-          {publicationsList.map((publication, index) => (
+          {presentationsList.map((presentation, index) => (
             <Box key={index} sx={{ mb: 4 }}>
               <Grid container spacing={3} alignItems="center">
                 {/* Year Column */}
                 <Grid item xs={2}>
                   <Typography variant="body2" color="textSecondary" fontWeight="bold">
-                    {publication.year}
+                    {presentation.year}
                   </Typography>
                 </Grid>
 
                 {/* Details Column */}
                 <Grid item xs={8}>
                   <Typography variant="body2" fontWeight="bold" gutterBottom>
-                    <Link
-                      href={publication.links.find((link) => link.label === 'DOI')?.url || '#'}
-                      underline="hover"
-                      color="inherit"
-                      target="_blank"
-                    >
-                      {publication.title}
-                    </Link>
+                    {presentation.title}
                   </Typography>
                   <Typography variant="body2" color="textSecondary" gutterBottom>
-                    {highlightAuthor(publication.authors, 'Gilles Eerlings')}
+                    {presentation.location}
                   </Typography>
-                  <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                    {publication.links.map((link, i) => (
+                  <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                    {presentation.eventPage && (
                       <Button
-                        key={i}
                         variant="outlined"
                         size="small"
-                        href={link.url}
+                        href={presentation.eventPage}
                         target="_blank"
                       >
-                        {link.label}
+                        Event Page
                       </Button>
-                    ))}
+                    )}
+                    <Button
+                      variant="outlined"
+                      size="small"
+                      href={presentation.pdf}
+                      target="_blank"
+                    >
+                      View PDF
+                    </Button>
                   </Box>
                 </Grid>
 
@@ -93,8 +80,8 @@ const Publications = () => {
                     }}
                   >
                     <img
-                      src={getConferenceLogo(publication.conference)}
-                      alt={`${publication.conference} Logo`}
+                      src={getConferenceLogo(presentation.conference)}
+                      alt={`${presentation.conference} Logo`}
                       style={{ width: '100px', height: '48px', objectFit: 'contain' }}
                     />
                   </Box>
@@ -109,4 +96,4 @@ const Publications = () => {
   );
 };
 
-export default Publications;
+export default Presentations;
