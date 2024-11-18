@@ -1,0 +1,28 @@
+[
+    {
+        "year": "2025",
+        "courses": [
+            {
+            "name": "Machine Learning (incl. Deep Learning)",
+            "keywords": ["Artificial Intelligence", "Machine Learning"],
+            "number": "4174"
+            }
+        ]
+    },
+    {
+        "year": "2024",
+        "courses": [
+        {
+            "name": "Problem Solving",
+            "keywords": ["C", "Math", "Problem Solving"],
+            "number": "4861"
+        },
+        {
+            "name": "Advanced Object Oriented Programming",
+            "keywords": ["Design Patterns", "Java", "Object Oriented Programming", "Threading"],
+            "number": "4985"
+        }
+        ]
+    }
+  ]
+  

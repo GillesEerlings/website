@@ -42,8 +42,8 @@ export default function AppAppBar() {
     'Education',
     'Publications',
     'Presentations',
-    'Thesis Advising',
     'Teaching',
+    'Thesis Advising',
     'Reviewing Experience',
   ];
 

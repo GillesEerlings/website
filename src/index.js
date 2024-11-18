@@ -12,6 +12,7 @@ import Biography from './components/Biography';
 import Education from './components/Education';
 import Publications from './components/Publications';
 import Presentations from './components/Presentations';
+import Teaching from './components/Teaching';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,6 +24,7 @@ root.render(
     <Education></Education>
     <Publications></Publications>
     <Presentations></Presentations>
+    <Teaching></Teaching>
   </React.StrictMode>
 );
 

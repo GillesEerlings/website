@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Typography, Grid, Container } from '@mui/material';
+import { Box, Typography, Grid, Container, Button } from '@mui/material';
 import Divider from '@mui/material/Divider';
 
 const Education = () => {
@@ -35,10 +35,11 @@ const Education = () => {
               <Typography variant="body2" fontWeight="bold" gutterBottom>
                 {edu.degree}
               </Typography>
-              <Typography variant="body2" color="textSecondary">
+              <Typography variant="body2" color="textSecondary" gutterBottom>
                 {edu.thesis}
               </Typography>
-              <Typography variant="body2" color="primary">
+              
+              <Typography variant="body2" color="primary" sx={{ mt: 1 }}>
                 {edu.advisors.map((advisor, i) => (
                   <React.Fragment key={i}>
                     <a
@@ -59,11 +60,22 @@ const Education = () => {
                   </React.Fragment>
                 ))}
               </Typography>
+              {edu.pdf && (
+                <Button
+                  variant="outlined"
+                  size="small"
+                  href={edu.pdf}
+                  target="_blank"
+                  sx={{ mt: 1 }}
+                >
+                  View Thesis
+                </Button>
+              )}
             </Grid>
 
             {/* University Column */}
-            <Grid item xs={12} md={2} >
-              <Typography variant="body2" fontWeight="bold">
+            <Grid item xs={12} md={2}>
+              <Typography variant="body2" fontWeight="bold" align="center">
                 {edu.university}
               </Typography>
             </Grid>
