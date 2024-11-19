@@ -1,0 +1,23 @@
+[
+    {
+      "yearRange": "2024-2025",
+      "theses": [
+        {
+          "title": "Placeholder Title",
+          "keywords": ["Large Language Models", "Explainable AI", "Transformers", "Natural Language Processing"],
+          "type": "Master"
+        },
+        {
+          "title": "Stock Market Prediction using Machine Learning",
+          "keywords": ["Machine Learning", "Deep Learning", "Time Series Data", "Financial Data"],
+          "type": "Master"
+        },
+        {
+          "title": "Enhancing usability and Trust of Large Language Models through Citation, Visualisation and Explanation",
+          "keywords": ["Large Language Models", "Citations", "Information Visualisation", "Clustering"],
+          "type": "Master"
+        }
+      ]
+    }
+  ]
+  
