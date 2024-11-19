@@ -1,0 +1,20 @@
+[
+    {
+      "year": "2024",
+      "reviews": [
+        {
+          "title": "Full Paper Review",
+          "count": 3,
+          "conference_title": "The 16th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
+          "conference": "EICS"
+        },
+        {
+          "title": "Workshop Paper Review",
+          "count": 2,
+          "conference_title": "The 16th ACM SIGCHI Symposium on Engineering Interactive Computing Systems",
+          "conference": "CHI"
+        }
+      ]
+    }
+  ]
+  

@@ -14,6 +14,7 @@ import Publications from './components/Publications';
 import Presentations from './components/Presentations';
 import Teaching from './components/Teaching';
 import ThesisAdvising from './components/ThesisAdvising';
+import ReviewingExperience from './components/ReviewingExperience';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -27,6 +28,7 @@ root.render(
     <Presentations></Presentations>
     <Teaching></Teaching>
     <ThesisAdvising></ThesisAdvising>
+    <ReviewingExperience></ReviewingExperience>
   </React.StrictMode>
 );
 

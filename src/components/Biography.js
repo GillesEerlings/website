@@ -1,26 +1,16 @@
 import React from 'react';
-import { Box, Typography, Avatar, Grid, Link, IconButton, Container } from '@mui/material';
+import { Box, Typography, Avatar, Grid, Link, IconButton, Container, Divider } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SchoolIcon from '@mui/icons-material/School';
-import Divider from '@mui/material/Divider';
-
 
 const Biography = () => {
   return (
     <Box>
-      {/* Main Content Section */}
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          mt: 16, // Increased spacing from AppBar
-          px: 2,
-        }}
-      >
+      <Box sx={{ display: 'flex', flexDirection: 'column', mt: 16, px: 2 }}>
         <Container maxWidth="lg">
-          <Grid container spacing={4} alignItems="flex-start">
+          <Grid container spacing={4} alignItems="stretch">
             {/* Left Column: Profile Section */}
             <Grid
               item
@@ -33,10 +23,9 @@ const Biography = () => {
                 textAlign: 'center',
               }}
             >
-              {/* Profile Picture */}
               <Avatar
                 alt="Your Name"
-                src="/images/picture.jpg" // Replace with your image path
+                src="/images/picture.jpg"
                 sx={{ width: 175, height: 175, mb: 2 }}
               />
               <Typography variant="h4" fontWeight="bold">
@@ -77,54 +66,47 @@ const Biography = () => {
                   </Link>
                 </Typography>
               </Box>
-
-              {/* Updated Contact Icons */}
               <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2, gap: 1 }}>
-                {/* Email */}
-                <IconButton
-                  component={Link}
-                  href="mailto:gilles.eerlings@uhasselt.be"
-                  target="_blank"
-                >
+                <IconButton component={Link} href="mailto:gilles.eerlings@uhasselt.be" target="_blank">
                   <EmailIcon fontSize="small" />
                 </IconButton>
-                {/* Google Scholar */}
-                <IconButton
-                  component={Link}
-                  href="https://scholar.google.be/citations?hl=nl&user=4tD_uWkAAAAJ"
-                  target="_blank"
-                >
+                <IconButton component={Link} href="https://scholar.google.be/citations?hl=nl&user=4tD_uWkAAAAJ" target="_blank">
                   <SchoolIcon fontSize="small" />
                 </IconButton>
-                {/* GitHub */}
-                <IconButton
-                  component={Link}
-                  href="https://github.com/GillesEerlings"
-                  target="_blank"
-                >
+                <IconButton component={Link} href="https://github.com/GillesEerlings" target="_blank">
                   <GitHubIcon fontSize="small" />
                 </IconButton>
-                {/* LinkedIn */}
-                <IconButton
-                  component={Link}
-                  href="https://linkedin.com/in/gilles-eerlings-1999911a1"
-                  target="_blank"
-                >
+                <IconButton component={Link} href="https://linkedin.com/in/gilles-eerlings-1999911a1" target="_blank">
                   <LinkedInIcon fontSize="small" />
                 </IconButton>
               </Box>
             </Grid>
 
             {/* Right Column: About Me Section */}
-            <Grid item xs={12} md={8} mt={4}>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                About Me
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                Write a short description about yourself here. Share what you're
-                passionate about, your research interests, hobbies, and anything
-                you'd like others to know.
-              </Typography>
+            <Grid
+              item
+              xs={12}
+              md={8}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center', // Vertically center the content
+              }}
+            >
+              <Box>
+                {/* Professional Interests Section */}
+                <Typography variant="h6" fontWeight="bold" gutterBottom>
+                  About Me
+                </Typography>
+                <Typography variant="body2" color="textSecondary" paragraph>
+                  I am passionate about everything related to machine learning 🤖. My current focus lies in exploring the use of multiple machine learning models within the exciting domain of human-computer interaction. I aim to enhance trust and improve decision-making processes 🎯, all while keeping things transparent and explainable.
+                </Typography>
+
+                {/* Personal Interests Section */}
+                <Typography variant="body2" color="textSecondary" paragraph>
+                When I'm not busy working on AI <em>almost</em> taking over the world (in a totally explainable way, of course 😅), you'll find me exploring the world, backpacking through nature 🥾, traveling to discover new places and experiences 🌍, or simply taking my dog for a walk —a much smaller adventure, but just as fulfilling.
+                </Typography>
+              </Box>
             </Grid>
           </Grid>
           <Divider sx={{ mt: 6 }} />
