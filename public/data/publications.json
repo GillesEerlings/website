@@ -5,7 +5,6 @@
       "conference": "EICS",
       "year": 2024,
       "links": [
-        { "label": "Cite", "url": "#" },
         { "label": "DOI", "url": "https://doi.org/10.48550/arXiv.2411.10490" }
       ]
     },
@@ -15,7 +14,6 @@
       "conference": "EICS",
       "year": 2024,
       "links": [
-        { "label": "Cite", "url": "#" },
         { "label": "DOI", "url": "#" }
       ]
     }
