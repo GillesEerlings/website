@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { alpha, styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
@@ -6,7 +6,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import GEmonogramIcon from './AppBarHomeIcon';
+import AppBarHomeIcon from './AppBarHomeIcon';
+import Tooltip from '@mui/material/Tooltip';
 
 // Create a theme with the Inter font
 const theme = createTheme({
@@ -18,33 +19,33 @@ const theme = createTheme({
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between', // Distribute items evenly
+  justifyContent: 'space-between',
   flexShrink: 0,
   borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
   backdropFilter: 'blur(24px)',
   border: '1px solid',
-  borderColor: alpha(theme.palette.divider, 0.1), // Subtle border
+  borderColor: alpha(theme.palette.divider, 0.1),
   backgroundColor: alpha(theme.palette.background.default, 0.7),
-  boxShadow: theme.shadows[3], // Shadow for depth
+  boxShadow: theme.shadows[3],
   padding: '8px 12px',
 }));
 
 const SectionsContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
-  flex: 1, // Allow the container to stretch
-  justifyContent: 'space-evenly', // Evenly distribute buttons
+  flex: 1,
+  justifyContent: 'space-evenly',
   alignItems: 'center',
-  gap: '8px', // Add spacing between items
+  gap: '8px',
 }));
 
-export default function AppAppBar() {
+export default function AppAppBar({ onSectionClick }) {
   const sections = [
-    'Education',
-    'Publications',
-    'Presentations',
-    'Teaching',
-    'Thesis Advising',
-    'Reviewing Experience',
+    { name: 'Education', id: 'education' },
+    { name: 'Publications', id: 'publications' },
+    { name: 'Presentations', id: 'presentations' },
+    { name: 'Teaching', id: 'teaching' },
+    { name: 'Thesis Advising', id: 'thesis-advising' },
+    { name: 'Reviewing Experience', id: 'reviewing-experience' },
   ];
 
   return (
@@ -62,48 +63,71 @@ export default function AppAppBar() {
       >
         <Container maxWidth="lg">
           <StyledToolbar variant="dense" disableGutters>
-            {/* Logo/Icon */}
-            
-            {/* Sections (evenly distributed) */}
+
+            {/* Sections */}
             <SectionsContainer>
-            <GEmonogramIcon />
-              {sections.map((text) => (
+              {/* Logo/Icon */}
+              <AppBarHomeIcon
+                onClick={() => onSectionClick('biography')}
+              />
+              {sections.map(({ name, id }) => (
                 <Button
-                  key={text}
+                  key={id}
+                  onClick={() => onSectionClick(id)}
                   variant="text"
                   size="small"
                   sx={{
-                    color: 'text.primary', // Default black text
+                    color: 'text.primary',
                     textTransform: 'none',
-                    fontWeight: 400, // Reduced font weight for lighter text
+                    fontWeight: 400,
                     fontFamily: 'Inter, sans-serif',
                     px: 2,
                     '&:hover': {
-                      backgroundColor: alpha('#000000', 0.05), // Light grey hover effect
+                      backgroundColor: alpha('#000000', 0.05),
                     },
                   }}
                 >
-                  {text}
+                  {name}
                 </Button>
               ))}
-              {/* Blog Button */}
-              <Button
-                variant="contained"
-                size="small"
-                sx={{
-                  textTransform: 'none',
-                  fontWeight: 500,
-                  fontFamily: 'Inter, sans-serif',
-                  px: 2,
-                  backgroundColor: '#3C3C3C', // Dark grey background
-                  color: '#FFFFFF', // White text
-                  '&:hover': {
-                    backgroundColor: '#5C5C5C', // Slightly lighter grey hover effect
-                  },
-                }}
-              >
-                Blog
-              </Button>
+              <Tooltip title="Coming soon!" arrow>
+                <Button
+                  variant="contained"
+                  size="small"
+                  sx={{
+                    textTransform: 'none',
+                    fontWeight: 500,
+                    fontFamily: 'Inter, sans-serif',
+                    px: 2,
+                    backgroundColor: '#3C3C3C',
+                    color: '#FFFFFF',
+                    '&:hover': {
+                      backgroundColor: '#5C5C5C',
+                    },
+                  }}
+                >
+                  Projects
+                </Button>
+              </Tooltip>
+              <Tooltip title="Coming soon!" arrow>
+                <Button
+                  variant="contained"
+                  size="small"
+                  sx={{
+                    textTransform: 'none',
+                    fontWeight: 500,
+                    fontFamily: 'Inter, sans-serif',
+                    px: 2,
+                    backgroundColor: '#3C3C3C',
+                    color: '#FFFFFF',
+                    '&:hover': {
+                      backgroundColor: '#5C5C5C',
+                    },
+                  }}
+                >
+                  Blog
+                </Button>
+              </Tooltip>
             </SectionsContainer>
           </StyledToolbar>
         </Container>
