@@ -1,6 +1,5 @@
 import React from 'react';
-import { alpha, styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import { alpha, styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -9,12 +8,6 @@ import Container from '@mui/material/Container';
 import AppBarHomeIcon from './AppBarHomeIcon';
 import Tooltip from '@mui/material/Tooltip';
 
-// Create a theme with the Inter font
-const theme = createTheme({
-  typography: {
-    fontFamily: 'Inter, sans-serif',
-  },
-});
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -49,8 +42,6 @@ export default function AppAppBar({ onSectionClick }) {
   ];
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
       <AppBar
         position="fixed"
         enableColorOnDark
@@ -75,11 +66,11 @@ export default function AppAppBar({ onSectionClick }) {
                   key={id}
                   onClick={() => onSectionClick(id)}
                   variant="text"
-                  size="small"
+                  size="normal"
                   sx={{
                     color: 'text.primary',
                     textTransform: 'none',
-                    fontWeight: 400,
+                    fontWeight: 600,
                     fontFamily: 'Inter, sans-serif',
                     px: 2,
                     '&:hover': {
@@ -93,7 +84,6 @@ export default function AppAppBar({ onSectionClick }) {
               <Tooltip title="Coming soon!" arrow>
                 <Button
                   variant="contained"
-                  size="small"
                   sx={{
                     textTransform: 'none',
                     fontWeight: 500,
@@ -112,7 +102,6 @@ export default function AppAppBar({ onSectionClick }) {
               <Tooltip title="Coming soon!" arrow>
                 <Button
                   variant="contained"
-                  size="small"
                   sx={{
                     textTransform: 'none',
                     fontWeight: 500,
@@ -132,6 +121,5 @@ export default function AppAppBar({ onSectionClick }) {
           </StyledToolbar>
         </Container>
       </AppBar>
-    </ThemeProvider>
   );
 }
