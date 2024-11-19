@@ -7,7 +7,7 @@ const Teaching = () => {
 
   useEffect(() => {
     // Fetch the JSON file from the public folder
-    fetch('/data/teaching.json')
+    fetch(`${process.env.PUBLIC_URL}/data/teaching.json`)
       .then((response) => response.json())
       .then((data) => setTeachingList(data))
       .catch((error) => console.error('Error fetching teaching data:', error));

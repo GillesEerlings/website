@@ -1,0 +1,36 @@
+[
+    {
+      "date": "2022 - 2024",
+      "degree": "Master's Degree in Computer Science",
+      "thesis": "Thesis: Many Minds, One Decision: Leveraging Multiple AI Models for Informed Decision-Making",
+      "pdf": "/theses/Master_Thesis.pdf",
+      "advisors": [
+        { "name": "Prof. dr. Kris Luyten", "link": "https://www.krisluyten.net/" },
+        { "name": "Prof. dr. Jori Liesenborgs", "link": "https://www.uhasselt.be/nl/wie-is-wie/detail/jori-liesenborgs" },
+        { "name": "Prof. dr. Gustavo Rovelo Ruiz", "link": "https://www.uhasselt.be/nl/wie-is-wie/gustavo-roveloruiz" }
+      ],
+      "university": "Hasselt University"
+    },
+    {
+      "date": "2021 - 2022",
+      "degree": "Bridging Program in Computer Science",
+      "thesis": "Thesis: Explainable AI in Group Recommender Systems (in Dutch)",
+      "pdf": "/theses/UH_Bachelor_Thesis.pdf",
+      "advisors": [
+        { "name": "Prof. dr. Davy Vanacken", "link": "https://www.uhasselt.be/nl/wie-is-wie/davy-vanacken" },
+        { "name": "Raf Menten", "link" : "https://uhasselt.be/nl/wie-is-wie/detail/raf-menten"}
+      ],
+      "university": "Hasselt University"
+    },
+    {
+        "date": "2018 - 2021",
+        "degree": "Bachelor's Degree in Applied Computer Science",
+        "thesis": "Thesis: XAI: dAIsy - Natural Language Powered Chatbot (in Dutch)",
+        "pdf": "/theses/PXL_Bachelor_Thesis.pdf",
+        "advisors": [
+          { "name": "Robin Schrijvers", "link": "https://robinschrijvers.be/" },
+          { "name": "Sam van Rijn", "link": "https://be.linkedin.com/in/sam-van-rijn-297a1a59"}
+        ],
+        "university": "PXL University of Applied Sciences and Arts"
+      }
+  ]

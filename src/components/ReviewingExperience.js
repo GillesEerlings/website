@@ -7,7 +7,7 @@ const ReviewingExperience = () => {
 
   useEffect(() => {
     // Fetch the JSON file from the public folder
-    fetch('/data/reviewing.json')
+    fetch(`${process.env.PUBLIC_URL}/data/reviewing.json`)
       .then((response) => response.json())
       .then((data) => setReviewingList(data))
       .catch((error) => console.error('Error fetching reviewing data:', error));
@@ -16,9 +16,9 @@ const ReviewingExperience = () => {
   const getConferenceLogo = (conference) => {
     switch (conference) {
       case 'EICS':
-        return '/images/eics-icon.jpg'; // Replace with the actual path to the conference icon
+        return `${process.env.PUBLIC_URL}/images/eics-icon.jpg`; // Replace with the actual path to the conference icon
       default:
-        return '/images/default-icon.jpg'; // Fallback icon
+        return `${process.env.PUBLIC_URL}/images/default-icon.jpg`; // Fallback icon
     }
   };
 

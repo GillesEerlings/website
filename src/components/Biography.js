@@ -25,7 +25,7 @@ const Biography = () => {
             >
               <Avatar
                 alt="Your Name"
-                src="/images/picture.jpg"
+                src={`${process.env.PUBLIC_URL}/images/picture.jpg`}
                 sx={{ width: 175, height: 175, mb: 2 }}
               />
               <Typography variant="h4" fontWeight="bold">

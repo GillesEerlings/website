@@ -7,7 +7,7 @@ const Publications = () => {
 
   useEffect(() => {
     // Fetch the JSON file from the public folder
-    fetch('/data/publications.json')
+    fetch(`${process.env.PUBLIC_URL}/data/publications.json`)
       .then((response) => response.json())
       .then((data) => setPublicationsList(data))
       .catch((error) => console.error('Error fetching publications:', error));
@@ -16,7 +16,7 @@ const Publications = () => {
   const getConferenceLogo = (conference) => {
     switch (conference) {
       case 'EICS':
-        return "/images/eics-icon.jpg"; // Path to the EICS logo
+        return `${process.env.PUBLIC_URL}/images/eics-icon.jpg`; // Path to the EICS logo
       default:
         return null; // Default fallback logo if needed
     }

@@ -1,0 +1,25 @@
+[
+    {
+        "year": "2025",
+        "courses": [
+            {
+            "name": "Machine Learning (incl. Deep Learning)",
+            "keywords": ["Deep Learning", "Supervised Learning", "Unsupervised Learning", "Reinforcement Learning"],
+            "number": "4174",
+            "link": "https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2024&i=4174&n=4&t=04"
+            }
+        ]
+    },
+    {
+        "year": "2024",
+        "courses": [
+        {
+            "name": "Advanced Object Oriented Programming",
+            "keywords": ["Design Patterns", "Java", "Object Oriented Programming", "Threading"],
+            "number": "4985",
+            "link": "https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2024&i=4985&n=4&t=01"
+        }
+        ]
+    }
+  ]
+  

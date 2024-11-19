@@ -7,7 +7,7 @@ const Presentations = () => {
 
   useEffect(() => {
     // Fetch the JSON file from the public folder
-    fetch('/data/presentations.json')
+    fetch(`${process.env.PUBLIC_URL}/data/presentations.json`)
       .then((response) => response.json())
       .then((data) => setPresentationsList(data))
       .catch((error) => console.error('Error fetching presentations data:', error));
@@ -16,7 +16,7 @@ const Presentations = () => {
   const getConferenceLogo = (conference) => {
     switch (conference) {
       case 'FAIR':
-        return '/images/fair-icon.jpg'; // Path to the FAIR logo
+        return `${process.env.PUBLIC_URL}/images/fair-icon.jpg`; // Path to the FAIR logo
       default:
         return null; // Fallback for other conferences
     }
@@ -61,7 +61,7 @@ const Presentations = () => {
                     <Button
                       variant="outlined"
                       size="small"
-                      href={presentation.pdf}
+                      href={`${process.env.PUBLIC_URL}` + presentation.pdf}
                       target="_blank"
                     >
                       View PDF

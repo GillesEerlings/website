@@ -7,7 +7,7 @@ const ThesisAdvising = () => {
 
   useEffect(() => {
     // Fetch the JSON file from the public folder
-    fetch('/data/theses.json')
+    fetch(`${process.env.PUBLIC_URL}/data/theses.json`)
       .then((response) => response.json())
       .then((data) => setThesisList(data))
       .catch((error) => console.error('Error fetching thesis data:', error));

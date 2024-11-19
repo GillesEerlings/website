@@ -7,7 +7,7 @@ const Education = () => {
 
   useEffect(() => {
     // Fetch the JSON file from the public folder
-    fetch('/data/education.json')
+    fetch(`${process.env.PUBLIC_URL}/data/education.json`)
       .then((response) => response.json())
       .then((data) => setEducationList(data))
       .catch((error) => console.error('Error fetching education data:', error));
@@ -64,7 +64,7 @@ const Education = () => {
                 <Button
                   variant="outlined"
                   size="small"
-                  href={edu.pdf}
+                  href={`${process.env.PUBLIC_URL}` + edu.pdf}
                   target="_blank"
                   sx={{ mt: 1 }}
                 >
