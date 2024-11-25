@@ -13,12 +13,18 @@
     {
         "year": "2024",
         "courses": [
-        {
-            "name": "Advanced Object Oriented Programming",
-            "keywords": ["Design Patterns", "Java", "Object Oriented Programming", "Threading"],
-            "number": "4985",
-            "link": "https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2024&i=4985&n=4&t=01"
-        }
+            {
+                "name": "Problem Solving",
+                "keywords": ["Problem Solving", "C"],
+                "number": "4861",
+                "link": "https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2024&i=4861&n=4&t=01"
+            },
+            {
+                "name": "Advanced Object Oriented Programming",
+                "keywords": ["Design Patterns", "Java", "Object Oriented Programming", "Threading"],
+                "number": "4985",
+                "link": "https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2024&i=4985&n=4&t=01"
+            }
         ]
     }
   ]
