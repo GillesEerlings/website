@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://gilleseerlings.github.io/website/sitemap.xml
